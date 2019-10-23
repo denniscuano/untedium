@@ -1,0 +1,8 @@
+#!/bin/sh
+useradd -m $den
+passwd $den
+mkdir -p /shared/$den
+chown $den.users /shared/$1
+chmod 775 /shared/$den
+ln -s /shared/$den /home/$den/shared
+chown $den.users /home/$den /shared
